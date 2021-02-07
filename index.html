@@ -7,31 +7,40 @@
     <title>Drag</title>
     <style>
         #bigBox{
-            max-width: 404px;
+            max-width: 456px;
             display: flex;
             flex-wrap: wrap;
-            margin-left: calc(50% - 202px);
+            margin-left: calc(50% - 228px);
         }
-        #box1,#box2,#box3,#box4{
-            width: 200px;
-            height: 200px;
+        #box1,#box2,#box3,#box4,#box5,#box6,#box7,#box8,#box9{
+            width: 150px;
+            height: 150px;
             border: 1px dotted #aaa;
         }
         img{
-            width: 160px;
-            height: 160px;
-            margin: 20px;
+            width: 130px;
+            height: 130px;
+            margin: 10px;
         }
     </style>
 </head>
 <body>
     <div id="bigBox">
-        <div id="box1" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <div id="box1" ondrop="drop(event)" ondragover="allowDrop(event)" >
             <img src="./images/monkey.jpg" draggable="true" ondragstart="drag(event)" id="drag1">
         </div>
-        <div id="box2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-        <div id="box3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-        <div id="box4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div id="box2" ondrop="drop(event)" ondragover="allowDrop(event)" ></div>
+        <div id="box3" ondrop="drop(event)" ondragover="allowDrop(event)" ></div>
+        <div id="box4" ondrop="drop(event)" ondragover="allowDrop(event)" ></div>
+        <div id="box5" ondrop="drop(event)" ondragover="allowDrop(event)" >
+            <img src="./images/cat.jpg" draggable="true" ondragstart="drag(event)" id="drag2">
+        </div>
+        <div id="box6" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div id="box7" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div id="box8" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div id="box9" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <img src="./images/eagle.jpg" draggable="true" ondragstart="drag(event)" id="drg3">
+        </div>
     </div>
 </body>
 <script>
@@ -46,6 +55,7 @@
     function drop(e){
         e.preventDefault();
         var data=e.dataTransfer.getData("Text");
+        console.log(e)
         e.target.appendChild(document.getElementById(data));
     }
     </script>
