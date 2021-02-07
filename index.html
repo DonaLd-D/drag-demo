@@ -9,6 +9,10 @@
         html{
             background-color: pink;
         }
+        #header h2{
+            text-align: center;
+            color: #ffe;
+        }
         #bigBox{
             max-width: 456px;
             display: flex;
@@ -22,29 +26,42 @@
             border: 1px dotted #aaa;
         }
         img{
-            width: 130px;
-            height: 130px;
-            margin: 10px;
+            width: 145px;
+            height: 145px;
+            margin: 2.5px;
         }
     </style>
 </head>
 <body>
+    <div id="header">
+        <h2>九宫格拼图</h2>
+    </div>
     <div id="bigBox">
         <div id="box1" ondrop="drop(event)" ondragover="allowDrop(event)" >
-            <img src="./images/monkey.jpg" draggable="true" ondragstart="drag(event)" id="drag1">
+            <img src="./images/01.png" draggable="true" ondragstart="drag(event)" id="drag1">
         </div>
-        <div id="box2" ondrop="drop(event)" ondragover="allowDrop(event)" ></div>
-        <div id="box3" ondrop="drop(event)" ondragover="allowDrop(event)" ></div>
-        <div id="box4" ondrop="drop(event)" ondragover="allowDrop(event)" ></div>
+        <div id="box2" ondrop="drop(event)" ondragover="allowDrop(event)" >
+            <img src="./images/02.png" draggable="true" ondragstart="drag(event)" id="drag2">
+        </div>
+        <div id="box3" ondrop="drop(event)" ondragover="allowDrop(event)" >
+            <img src="./images/03.png" draggable="true" ondragstart="drag(event)" id="drag3">
+        </div>
+        <div id="box4" ondrop="drop(event)" ondragover="allowDrop(event)" >
+            <img src="./images/04.png" draggable="true" ondragstart="drag(event)" id="drag4">
+        </div>
         <div id="box5" ondrop="drop(event)" ondragover="allowDrop(event)" >
-            <img src="./images/cat.jpg" draggable="true" ondragstart="drag(event)" id="drag2">
+            <img src="./images/05.png" draggable="true" ondragstart="drag(event)" id="drag5">
         </div>
-        <div id="box6" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-        <div id="box7" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-        <div id="box8" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-        <div id="box9" ondrop="drop(event)" ondragover="allowDrop(event)">
-            <img src="./images/eagle.jpg" draggable="true" ondragstart="drag(event)" id="drg3">
+        <div id="box6" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <img src="./images/06.png" draggable="true" ondragstart="drag(event)" id="drag6">
         </div>
+        <div id="box7" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <img src="./images/07.png" draggable="true" ondragstart="drag(event)" id="drag7">
+        </div>
+        <div id="box8" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <img src="./images/08.png" draggable="true" ondragstart="drag(event)" id="drag8">
+        </div>
+        <div id="box9" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
     </div>
 </body>
 <script>
